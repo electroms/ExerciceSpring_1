@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+ https://www.springframework.org/schema/beans/spring-beans.xsd">
+	<bean id="batimentPierreBean" class="exercices.BatimentPierre">
+		<constructor-arg type="int" value="400" />
+		<constructor-arg type="int" value="15" />
+	</bean>
+
+	<bean id="batimentBriqueBean" class="exercices.BatimentBrique">
+		<constructor-arg type="int" value="600" />
+		<constructor-arg type="int" value="18" />
+	</bean>
+
+	<bean id="terrainGazonBean" class="exercices.TerrainGazon">
+		<constructor-arg type="int" value="2000" />
+	</bean>
+
+	<bean id="terrainBetonBean" class="exercices.TerrainBeton">
+		<constructor-arg type="int" value="2000" />
+	</bean>
+
+    <bean id="propriete1Bean" class="exercices.Propriete">
+    	<constructor-arg type="String" value="8 Chemin Beckensteiner - 69 Lyon" />
+    	<constructor-arg ref="batimentPierreBean" />
+    	<constructor-arg ref="terrainGazonBean" />
+    </bean>
+
+    <bean id="propriete2Bean" class="exercices.Propriete">
+    	<constructor-arg type="String" value="12 Chemin du pelosset - 69 Lyon" />
+    	<constructor-arg ref="batimentBriqueBean" />
+    	<constructor-arg ref="terrainBetonBean" />
+    </bean>
+</beans>
