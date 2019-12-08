@@ -17,6 +17,7 @@ public class Satellite {
 	private ChargeUtile chargeUtile;
 	private PanneauSolaire1 panneauSolaire1;
 	private PanneauSolaire2 panneauSolaire2;
+	private AntenneRadio antenneRadio;
 	
 	public Satellite(PlateformeMecanique plateformeMecanique, ChargeUtile chargeUtile) {
 		super();
@@ -32,13 +33,18 @@ public class Satellite {
 		this.panneauSolaire2 = panneauSolaire2;
 	}
 
-	public String chargeUtile() {
+	public ChargeUtile chargeUtile() {
 		// TODO Auto-generated method stub
-		return null;
+		return chargeUtile;
 	}
-	public String plateformeMecanique() {
+	
+	public PlateformeMecanique plateformeMecanique() {
 		// TODO Auto-generated method stub
-		return null;
+		return plateformeMecanique;
+	}
+	
+	public void setAntenneRadio(AntenneRadio antenneRadio) {
+		this.antenneRadio = antenneRadio;
 	}
 	
 
